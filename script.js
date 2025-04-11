@@ -1,38 +1,31 @@
-// Archivo: script.js
+// script.js
 
-// ⚠️ CAMBIÁ ESTE NOMBRE POR TU USUARIO DE GITHUB
-const GITHUB_USERNAME = "ARESxARG";
+// ⚠️ Reemplazá 'TU_USUARIO' por tu nombre de usuario de GitHub
+const GITHUB_USERNAME = 'ARESxARG';
 
-// Función para obtener los repos públicos del usuario
 async function fetchRepos() {
-  const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`;
+  const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`);
+  const repos = await response.json();
 
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
+  const container = document.getElementById('repos');
+  container.innerHTML = ''; // Limpia si había algo antes
 
-    if (!Array.isArray(data)) {
-      document.getElementById("repo-list").innerHTML = "<p>No se pudo acceder a los repositorios.</p>";
-      return;
-    }
+  repos.forEach(repo => {
+    const card = document.createElement('div');
+    card.className = 'repo-card';
 
-    const reposContainer = document.getElementById("repo-list");
+    const privateTag = repo.private ? '🔒 Privado' : '🌐 Público';
 
-    data.forEach(repo => {
-      const repoElement = document.createElement("div");
-      repoElement.className = "repo-item";
-      repoElement.innerHTML = `
-        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a> ${repo.private ? "🔒" : "🌐"}</h3>
-        <p>${repo.description || "Sin descripción."}</p>
-        <p>⭐ ${repo.stargazers_count} - ${repo.language || "Lenguaje no especificado"}</p>
-      `;
-      reposContainer.appendChild(repoElement);
-    });
-  } catch (error) {
-    console.error("Error al cargar los repos:", error);
-    document.getElementById("repo-list").innerHTML = "<p>Error al cargar los repositorios.</p>";
-  }
+    card.innerHTML = `
+      <h3>${repo.name}</h3>
+      <p>${repo.description || 'Sin descripción.'}</p>
+      <p><strong>${privateTag}</strong> ⭐ ${repo.stargazers_count}</p>
+      ${repo.private ? '<p style="color: red;">Este repositorio es privado.</p>' : `<a href="${repo.html_url}" target="_blank">Ver en GitHub</a>`}
+    `;
+
+    container.appendChild(card);
+  });
 }
 
-// Ejecutar al cargar la página
+// Ejecutamos la función al cargar la página
 window.onload = fetchRepos;
