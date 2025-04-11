@@ -1,0 +1,94 @@
+/* Archivo: style.css */
+/* Fuente general del sitio */
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del header */
+header {
+    background-color: #161b22;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    color: #8b949e;
+}
+
+/* Secciones generales */
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #30363d;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Lista de descargas */
+#downloads ul {
+    list-style: none;
+    padding: 0;
+}
+
+#downloads li a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+#downloads li a:hover {
+    text-decoration: underline;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #161b22;
+    color: #8b949e;
+}
+
+/* Responsive para Android y celulares */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
