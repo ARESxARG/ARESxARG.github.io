@@ -1,0 +1,34 @@
+Creative Commons Attribution-NonCommercial 4.0 International  
+https://creativecommons.org/licenses/by-nc/4.0/
+
+---
+
+Copyright (c) 2025 Alejo (@ARESxARG)
+
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- **NonCommercial** — You may not use the material for commercial purposes.
+
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+---
+
+### 🇪🇸 Traducción al español:
+
+Estás autorizado a:
+- Compartir — copiar y redistribuir este material en cualquier medio o formato
+- Adaptar — remezclar, transformar y construir a partir del material
+
+Bajo las siguientes condiciones:
+- **Atribución** — Debés dar el crédito correspondiente, incluir un enlace a la licencia e indicar si hiciste cambios.
+- **No Comercial** — No podés usar este material con fines comerciales.
+
+Sin restricciones adicionales — No podés aplicar términos legales ni medidas tecnológicas que restrinjan legalmente a otros de hacer lo que esta licencia permite.
+
+---
+
+📌 Esta licencia protege el código contra usos comerciales sin consentimiento y exige reconocimiento al autor original.
